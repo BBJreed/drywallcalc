@@ -21,6 +21,11 @@
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-9150671970123251~8918467889"
       }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cc0a12cd-9598-4ef7-b510-db63fa7d852e"
+      }
     }
   }
 }
