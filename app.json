@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Drywall Calculator Pro",
+    "slug": "drywall-calculator-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4A90E2"
+    },
+    "android": {
+      "package": "com.jake.drywallcalc",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
+        "backgroundImage": "./assets/adaptive-icon-background.png"
+      },
+      "permissions": [],
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-9150671970123251~8918467889"
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# Placeholder favicon
+# Create a proper favicon.png (32x32 or 48x48 pixels) and place it here
