@@ -19,3 +19,5 @@ dist/
 .env.*.local
 
 # Native folders
+android/
+ios/
