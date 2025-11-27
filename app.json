@@ -1,4 +1,4 @@
-﻿{
+{
   "expo": {
     "name": "Drywall Calculator Pro",
     "slug": "drywall-calculator-pro",
@@ -26,6 +26,9 @@
       "eas": {
         "projectId": "cc0a12cd-9598-4ef7-b510-db63fa7d852e"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "com.jake.drywallcalc"
     }
   }
 }
