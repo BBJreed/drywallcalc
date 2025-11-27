@@ -3,245 +3,106 @@ Volume serial number is FE32-7BB6
 C:.
 |   .gitignore
 |   App.js
-|   app.json
-|   CODE_SNIPPETS.txt
-|   eas.json
-|   package-lock.json
-|   package.json
-|   project-output.txt
-|   README.md
-|   
-+---.expo
-|       devices.json
-|       README.md
-|       
-+---assets
-|       favicon-placeholder.txt
-|       Gemini_Generated_Image_h700n2h700n2h700 (2).png
-|       Gemini_Generated_Image_h700n2h700n2h700 (3).png
-|       Gemini_Generated_Image_h700n2h700n2h700.png
-|       README.md
-|       
-+---node_modules
-|   |   .package-lock.json
-|   |   
-|   +---.bin
-|   |       acorn
-|   |       acorn.cmd
-|   |       acorn.ps1
-|   |       baseline-browser-mapping
-|   |       baseline-browser-mapping.cmd
-|   |       baseline-browser-mapping.ps1
-|   |       browserslist
-|   |       browserslist.cmd
-|   |       browserslist.ps1
-|   |       detect-libc
-|   |       detect-libc.cmd
-|   |       detect-libc.ps1
-|   |       envinfo
-|   |       envinfo.cmd
-|   |       envinfo.ps1
-|   |       esparse
-|   |       esparse.cmd
-|   |       esparse.ps1
-|   |       esvalidate
-|   |       esvalidate.cmd
-|   |       esvalidate.ps1
-|   |       excpretty
-|   |       excpretty.cmd
-|   |       excpretty.ps1
-|   |       expo
-|   |       expo-internal
-|   |       expo-internal.cmd
-|   |       expo-internal.ps1
-|   |       expo-modules-autolinking
-|   |       expo-modules-autolinking.cmd
-|   |       expo-modules-autolinking.ps1
-|   |       expo.cmd
-|   |       expo.ps1
-|   |       fxparser
-|   |       fxparser.cmd
-|   |       fxparser.ps1
-|   |       image-size
-|   |       image-size.cmd
-|   |       image-size.ps1
-|   |       is-docker
-|   |       is-docker.cmd
-|   |       is-docker.ps1
-|   |       js-yaml
-|   |       js-yaml.cmd
-|   |       js-yaml.ps1
-|   |       jscodeshift
-|   |       jscodeshift.cmd
-|   |       jscodeshift.ps1
-|   |       jsesc
-|   |       jsesc.cmd
-|   |       jsesc.ps1
-|   |       json5
-|   |       json5.cmd
-|   |       json5.ps1
-|   |       logkitty
-|   |       logkitty.cmd
-|   |       logkitty.ps1
-|   |       loose-envify
-|   |       loose-envify.cmd
-|   |       loose-envify.ps1
-|   |       md5-file
-|   |       md5-file.cmd
-|   |       md5-file.ps1
-|   |       metro
-|   |       metro-symbolicate
-|   |       metro-symbolicate.cmd
-|   |       metro-symbolicate.ps1
-|   |       metro.cmd
-|   |       metro.ps1
-|   |       mime
-|   |       mime.cmd
-|   |       mime.ps1
-|   |       mkdirp
-|   |       mkdirp.cmd
-|   |       mkdirp.ps1
-|   |       nanoid
-|   |       nanoid.cmd
-|   |       nanoid.ps1
-|   |       node-which
-|   |       node-which.cmd
-|   |       node-which.ps1
-|   |       parser
-|   |       parser.cmd
-|   |       parser.ps1
-|   |       print-chrome-path
-|   |       print-chrome-path.cmd
-|   |       print-chrome-path.ps1
-|   |       qrcode-terminal
-|   |       qrcode-terminal.cmd
-|   |       qrcode-terminal.ps1
-|   |       rc
-|   |       rc.cmd
-|   |       rc.ps1
-|   |       react-native
-|   |       react-native.cmd
-|   |       react-native.ps1
-|   |       regjsparser
-|   |       regjsparser.cmd
-|   |       regjsparser.ps1
-|   |       resolve
-|   |       resolve.cmd
-|   |       resolve.ps1
-|   |       rimraf
-|   |       rimraf.cmd
-|   |       rimraf.ps1
-|   |       semver
-|   |       semver.cmd
-|   |       semver.ps1
-|   |       sucrase
-|   |       sucrase-node
-|   |       sucrase-node.cmd
-|   |       sucrase-node.ps1
-|   |       sucrase.cmd
-|   |       sucrase.ps1
-|   |       terser
-|   |       terser.cmd
-|   |       terser.ps1
-|   |       ua-parser-js
-|   |       ua-parser-js.cmd
-|   |       ua-parser-js.ps1
-|   |       update-browserslist-db
-|   |       update-browserslist-db.cmd
-|   |       update-browserslist-db.ps1
-|   |       uuid
-|   |       uuid.cmd
-|   |       uuid.ps1
-|   |       yaml
-|   |       yaml.cmd
-|   |       yaml.ps1
-|   |       
-|   +---@babel
-|   |   +---code-frame
-|   |   |   |   LICENSE
-|   |   |   |   package.json
-|   |   |   |   README.md
-|   |   |   |   
-|   |   |   \---lib
-|   |   |           index.js
-|   |   |           index.js.map
-|   |   |           
-|   |   +---compat-data
-|   |   |   |   corejs2-built-ins.js
-|   |   |   |   corejs3-shipped-proposals.js
-|   |   |   |   LICENSE
-|   |   |   |   native-modules.js
-|   |   |   |   overlapping-plugins.js
-|   |   |   |   package.json
-|   |   |   |   plugin-bugfixes.js
-|   |   |   |   plugins.js
-|   |   |   |   README.md
-|   |   |   |   
-|   |   |   \---data
-|   |   |           corejs2-built-ins.json
-|   |   |           corejs3-shipped-proposals.json
-|   |   |           native-modules.json
-|   |   |           overlapping-plugins.json
-|   |   |           plugin-bugfixes.json
-|   |   |           plugins.json
-|   |   |           
-|   |   +---core
-|   |   |   |   LICENSE
-|   |   |   |   package.json
-|   |   |   |   README.md
-|   |   |   |   
-|   |   |   +---lib
-|   |   |   |   |   index.js
-|   |   |   |   |   index.js.map
-|   |   |   |   |   parse.js
-|   |   |   |   |   parse.js.map
-|   |   |   |   |   transform-ast.js
-|   |   |   |   |   transform-ast.js.map
-|   |   |   |   |   transform-file-browser.js
-|   |   |   |   |   transform-file-browser.js.map
-|   |   |   |   |   transform-file.js
-|   |   |   |   |   transform-file.js.map
-|   |   |   |   |   transform.js
-|   |   |   |   |   transform.js.map
-|   |   |   |   |   
-|   |   |   |   +---config
-|   |   |   |   |   |   cache-contexts.js
-|   |   |   |   |   |   cache-contexts.js.map
-|   |   |   |   |   |   caching.js
-|   |   |   |   |   |   caching.js.map
-|   |   |   |   |   |   config-chain.js
-|   |   |   |   |   |   config-chain.js.map
-|   |   |   |   |   |   config-descriptors.js
-|   |   |   |   |   |   config-descriptors.js.map
-|   |   |   |   |   |   full.js
-|   |   |   |   |   |   full.js.map
-|   |   |   |   |   |   index.js
-|   |   |   |   |   |   index.js.map
-|   |   |   |   |   |   item.js
-|   |   |   |   |   |   item.js.map
-|   |   |   |   |   |   partial.js
-|   |   |   |   |   |   partial.js.map
-|   |   |   |   |   |   pattern-to-regex.js
-|   |   |   |   |   |   pattern-to-regex.js.map
-|   |   |   |   |   |   plugin.js
-|   |   |   |   |   |   plugin.js.map
-|   |   |   |   |   |   printer.js
-|   |   |   |   |   |   printer.js.map
-|   |   |   |   |   |   resolve-targets-browser.js
-|   |   |   |   |   |   resolve-targets-browser.js.map
-|   |   |   |   |   |   resolve-targets.js
-|   |   |   |   |   |   resolve-targets.js.map
-|   |   |   |   |   |   util.js
-|   |   |   |   |   |   util.js.map
-|   |   |   |   |   |   
-|   |   |   |   |   +---files
-|   |   |   |   |   |       configuration.js
-|   |   |   |   |   |       configuration.js.map
-|   |   |   |   |   |       import.cjs
-|   |   |   |   |   |       import.cjs.map
-|   |   |   |   |   |       index-browser.js
-|   |   |   |   |   |       index-browser.js.map
+Project: drywallcalc
+Location: C:\\Users\\User\\Drywall-calculator-Pro
+Generated: 2025-11-27
+
+Summary
+-------
+This file contains a concise snapshot of the project state, recent build attempts, observed errors, and exact commands to capture full EAS build output for diagnosis.
+
+Repo / Branch
+-------------
+- Repository: drywallcalc
+- Branch: master
+
+Recent commits
+--------------
+- "Save progress: diagnostics, assets, and build fixes" (added assets and diagnostics)
+- "Add native Android config" (prebuild/Android config)
+
+Recent terminal commands (local)
+-------------------------------
+- cd C:\\Users\\User\\Drywall-calculator-Pro
+- npm install
+- npm install react@18.2.0 react-dom@18.2.0 --save --legacy-peer-deps
+- npx expo start --web --clear
+- npx expo prebuild --clean
+- git add -A
+- git commit -m "Add native Android config"
+- npx eas build --platform android --profile production
+- npx eas build --platform android --profile development
+
+Known issues observed
+---------------------
+1) Gradle bundling failure during EAS build:
+	- Key failing task: ':app:createBundleReleaseJsAndAssets'
+	- Gradle error: "Process 'command 'node'' finished with non-zero exit value 1"
+	- Outcome: Build fails with "Gradle build failed with unknown error". See 'Run gradlew' phase for the JS error.
+
+2) Metro / JS bundling errors seen earlier locally:
+	- Missing asset error (example from earlier run):
+	  "Error: ENOENT: no such file or directory, open 'C:\\Users\\User\\Drywall-calculator-Pro\\assets\\favicon.png'"
+	- Some deprecation warnings from expo-modules during Android build; these are warnings and not fatal:
+	  "... 'Promise' is deprecated ... Use expo.modules.kotlin.Promise instead"
+
+3) Typical root causes for the above Gradle failure:
+	- A runtime JS error during production bundling (missing import, syntax error, uncaught exception in startup code)
+	- Missing or mis-referenced assets (icon, splash, favicon)
+	- Dependency resolution issues causing Metro to fail resolving a module
+
+What to capture (recommended)
+-----------------------------
+When an EAS build fails, the most useful section is the 'Run gradlew' logs; capture the last 200 lines of that section and the Metro bundler output printed above it. Use one of the methods below.
+
+Capture commands (recommended)
+------------------------------
+PowerShell (local EAS run and save):
+
+```powershell
+# 1) Run the EAS build and save logs to a file
+npx eas build --platform android --profile production 2>&1 | Tee-Object -FilePath eas-build.log
+
+# 2) After failure, show the last 200 lines
+Get-Content eas-build.log -Tail 200
+```
+
+Alternate: use the Expo web dashboard Build → select build → Logs. Copy the full 'Run gradlew' phase output (download if possible) and paste here.
+
+Local reproduction
+------------------
+To reproduce the JS bundling error locally (recommended before rebuilding on EAS):
+
+```powershell
+# Start Metro in production mode to trigger the same bundling behavior
+npx expo start --no-dev --minify
+# Or attempt to create a production bundle locally (if you have the CLI set up)
 |   |   |   |   |   |       index.js
+```
+
+If metro reports a stack trace or a module resolution error, fix that locally first.
+
+Troubleshooting checklist
+-------------------------
+1) Verify assets referenced in `app.json` exist in `assets/` (icon, splash, adaptive icons, favicon).
+2) Run `npm install` after removing any lockfile if dependency issues are suspected:
+
+```powershell
+rd /s /q node_modules\ndel package-lock.json
+npm install
+```
+
+3) Start Metro in production mode and fix any JS errors the bundler reports.
+4) Commit fixes and re-run `npx eas build --platform android --profile development` to test faster builds.
+
+If you paste the last ~200 lines of the 'Run gradlew' output here (or attach `eas-build.log`), I will analyze and propose a precise fix.
+
+Contacts / Notes
+----------------
+- Expo account used: bbjreed (project: drywall-calculator-pro)
+- EAS projectId: cc0a12cd-9598-4ef7-b510-db63fa7d852e (from `app.json` extras)
+
+End of file
 |   |   |   |   |   |       index.js.map
 |   |   |   |   |   |       module-types.js
 |   |   |   |   |   |       module-types.js.map

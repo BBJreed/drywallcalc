@@ -1,4 +1,4 @@
-{
+﻿{
   "cli": {
     "version": ">= 5.9.0"
   },
@@ -16,13 +16,6 @@
     "production": {
       "android": {
         "buildType": "apk"
-      }
-    }
-  },
-  "submit": {
-    "production": {
-      "android": {
-        "serviceAccountKeyPath": "./pc-api-key.json"
       }
     }
   }
