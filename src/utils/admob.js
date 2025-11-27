@@ -1,18 +1,13 @@
 // src/utils/admob.js
 
-import mobileAds, { MaxAdContentRating } from 'react-native-google-mobile-ads';
 
+import { setTestDeviceIDAsync, AdMobBanner, AdMobInterstitial, AdMobRewarded, AdMobRewardedAdEventType } from 'expo-ads-admob';
+
+// Optionally call this during app startup if you want to set test devices
 export const initializeAdMob = async () => {
   try {
-    await mobileAds().initialize();
-    
-    await mobileAds().setRequestConfiguration({
-      maxAdContentRating: MaxAdContentRating.G,
-      tagForChildDirectedTreatment: false,
-      tagForUnderAgeOfConsent: false,
-    });
-    
-    console.log('AdMob initialized successfully');
+    await setTestDeviceIDAsync('EMULATOR');
+    console.log('AdMob initialized (expo-ads-admob)');
   } catch (error) {
     console.error('AdMob initialization error:', error);
   }

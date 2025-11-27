@@ -2,19 +2,17 @@
 
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { AdMobBanner } from 'expo-ads-admob';
 import { AD_UNITS } from '../utils/admob';
 
 const BannerAdComponent = () => {
   return (
     <View style={styles.container}>
-      <BannerAd
-        unitId={AD_UNITS.banner}
-        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        requestOptions={{
-          requestNonPersonalizedAdsOnly: false,
-        }}
-        onAdFailedToLoad={(error) => {
+      <AdMobBanner
+        bannerSize="smartBannerPortrait"
+        adUnitID={AD_UNITS.banner}
+        servePersonalizedAds // true by default
+        onDidFailToReceiveAdWithError={(error) => {
           console.log('Banner ad failed to load:', error);
         }}
       />

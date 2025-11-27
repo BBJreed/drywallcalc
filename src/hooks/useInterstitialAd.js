@@ -1,43 +1,33 @@
 // src/hooks/useInterstitialAd.js
 
 import { useEffect, useState } from 'react';
-import { InterstitialAd, AdEventType } from 'react-native-google-mobile-ads';
+import { AdMobInterstitial } from 'expo-ads-admob';
 import { AD_UNITS } from '../utils/admob';
 
-const interstitial = InterstitialAd.createForAdRequest(AD_UNITS.interstitial, {
-  requestNonPersonalizedAdsOnly: false,
-});
+
 
 export const useInterstitialAd = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const unsubscribeLoaded = interstitial.addAdEventListener(
-      AdEventType.LOADED,
-      () => {
-        setLoaded(true);
-      }
-    );
-
-    const unsubscribeClosed = interstitial.addAdEventListener(
-      AdEventType.CLOSED,
-      () => {
+    const prepareAd = async () => {
+      await AdMobInterstitial.setAdUnitID(AD_UNITS.interstitial);
+      AdMobInterstitial.addEventListener('interstitialDidLoad', () => setLoaded(true));
+      AdMobInterstitial.addEventListener('interstitialDidClose', () => {
         setLoaded(false);
-        interstitial.load();
-      }
-    );
-
-    interstitial.load();
-
+        AdMobInterstitial.requestAdAsync().catch(() => {});
+      });
+      await AdMobInterstitial.requestAdAsync({ servePersonalizedAds: true });
+    };
+    prepareAd();
     return () => {
-      unsubscribeLoaded();
-      unsubscribeClosed();
+      AdMobInterstitial.removeAllListeners();
     };
   }, []);
 
-  const showAd = () => {
+  const showAd = async () => {
     if (loaded) {
-      interstitial.show();
+      await AdMobInterstitial.showAdAsync();
     }
   };
 
